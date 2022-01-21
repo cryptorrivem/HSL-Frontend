@@ -1,0 +1,626 @@
+/* #root {
+  background: url(../img/banner1.png) no-repeat center center fixed !important;
+} */
+
+/* godzid CSS */
+
+/* @font-face {
+  font-family: 'Symtext' ;
+  src: url('/fonts/Symtext.ttf') format('truetype');
+} */
+
+html {
+  scroll-padding-top: 8rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  scroll-behavior: smooth !important;
+}
+
+body, button, input {
+  font-family: Symtext!important;
+}
+
+button {
+  padding: 12px 20px;
+  cursor: pointer;
+  background: #08D5D6;
+  color: white;
+  border: 0;
+  border-bottom: 8px solid #068F97;
+  border-radius: 2px;
+}
+
+.colored-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg,#00F0F0,#E91AF0);
+}
+
+button:hover {
+  background: #068F97;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  background: #171717;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+nav {
+  min-height: 5rem;
+  position: fixed;
+  width: 100%;
+  background-color: #171717;
+  color: white;
+  box-shadow: 0 0 20px gray;
+  z-index: 99;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  /* padding-left: 24px; */
+}
+
+nav div img {
+  margin: 0 16px;
+}
+
+.nav-link {
+  margin: 0 12px;
+}
+
+.nav-item:hover {
+  /* border-bottom: 1px solid; */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg,#00F0F0,#E91AF0);
+}
+
+.nav-favicon {
+  margin: 0 8px;
+  height: 24px;
+  width: 24px;
+  filter: invert(1);
+}
+
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  /* padding-right: 48px; */
+  z-index: 999;
+}
+
+.nav-burger div {
+  width: 2rem;
+  height: 0.15rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.landing-container {
+  /* padding-top: 24px; */
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* text-align: center; */
+  /* align-items: center; */
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  /* background-image: url(/resources/images/tickets_background2.png); */
+  /* background-size: 100% 100%; */
+  /* background-size: contain; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+}
+
+marquee img {
+  padding: 0 6px;
+}
+
+.cta-button {
+  font-size: 24px;
+}
+
+.landing-container p span {
+  background-image: linear-gradient(45deg,#EF14F1,#EF14F1);
+  font-size: 16px;
+}
+
+.pot-container {
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#pot {
+  font-size: 60px;
+  line-height: 0;
+  height: 0;
+}
+
+.pot {
+  color: #FFB701;
+  font-size: 120px;
+  line-height: 0;
+}
+
+.pot-usd {
+  font-size: 40px;
+  margin-bottom: 56px;
+}
+
+.pot-container a:hover {
+  cursor: pointer;
+  color: #00F0F0;
+}
+
+.nft-container {
+  padding-bottom: 16px;
+}
+
+.nft-container img {
+  border-radius: 8px;
+  box-shadow: 0 0 8px 8px #EF14F1;
+}
+
+progress::-moz-progress-bar { background: #EF14F1; border-radius: 4px; }
+progress::-webkit-progress-value { background: #EF14F1; border-radius: 4px; }
+progress { background: #EF14F1; border-radius: 4px; }
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-container span {
+  position: absolute;
+  color: #fff;
+  text-align: right;
+  margin-bottom: 3px;
+}
+
+.buy-container {
+  z-index: 9;
+  /* padding-top: 120px; */
+}
+
+.ticket-fans {
+  /* background: red; */
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.ticket-fans img {
+  height: 300px;
+}
+
+.info-container {
+  padding: 48px 0px;
+  background: #030303;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* background: red; */
+}
+
+.info-content {
+  display: flex;
+  padding: 0 120px;
+}
+
+.info-content div {
+  padding: 0 12px;
+}
+
+.info {
+  width: 50%;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.how-container {
+  padding: 48px 120px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.steps-container img {
+  height: 240px;
+}
+
+.step {
+  text-align: left;
+}
+
+.step span {
+  font-size: 36px;
+  background-image: linear-gradient(45deg,#FFB701,#FFB701);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* display: flex; */
+  /* align-items: center; */
+}
+
+.calculator-container input {
+  width: 50%;
+}
+
+.calculations {
+  padding: 24px 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+}
+
+.calculation:first-child {
+  flex: 1 0 60%;
+  background: #FFB701;
+}
+
+.calculation {
+  flex: 1 0 41%;
+  background: #475057;
+  border-radius: 8px;
+}
+
+.ticket-buttons button {
+  margin: 12px;
+  padding: 6px 24px;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+  background: #030303;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Remove the arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+footer {
+  padding: 80px;
+}
+
+footer button {
+  /* height: 46px; */
+  margin: 16px 0;
+  /* border-radius: 40px; */
+  color: #1E293B;
+  background-image: linear-gradient(45deg,#00F0F0,#E91AF0);
+  border: none;
+  font-size: 16px;
+}
+
+footer button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(45deg,#E91AF0, #00F0F0);
+}
+
+.footer-links {
+  padding: 24px 0;
+}
+
+/* Responsiveness */
+@media (max-width: 1300px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-responsive {
+    min-height: 5rem;
+    width: 100%;
+    justify-content: space-around;
+    box-shadow: 0 0 20px rgba(0,0,0,0.04);
+  }
+
+  .nav-link {
+    margin: 16px 0;
+  }
+
+  .nav-burger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .ticket-fans img {
+    height: 260px;
+  }
+
+  .steps-container {
+    flex-direction: column;
+  }
+
+  .steps-container img {
+    padding-top: 16px;
+    height: 320px;
+  }
+
+  .calculation {
+    flex: 1 0 26%;
+    background: #475057;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .ticket-fans img {
+    height: 200px;
+  }
+
+  .calculation {
+    flex: 1 0 34%;
+    background: #475057;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 940px) {
+  #pot {
+    font-size: 45px;
+  }
+
+  .pot {
+    font-size: 90px;
+  }
+
+  .pot-usd {
+    font-size: 45px;
+    margin-bottom: 68px;
+  }
+
+  .nft-container img {
+    height: 220px;
+  }
+
+  #about {
+    padding: 0 60px;
+  }
+
+  .info-content {
+    flex-direction: column;
+    padding: 0 60px;
+  }
+
+  .info-content div {
+    padding: 0;
+  }
+
+  .how-container {
+    padding: 48px 60px;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .about-container img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 870px) {
+  .tickets-bought {
+    margin: 0 120px;
+  }
+
+  .calculations {
+    padding: 24px 20px;
+  }
+
+  .ticket-fans img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 680px) {
+  .current-pot-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 24px;
+  }
+
+  .current-pot-container h1 {
+    margin: 24px;
+  }
+
+  #pot {
+    font-size: 35px;
+  }
+
+  .pot {
+    font-size: 50px;
+  }
+
+  .pot-usd {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+  
+  .nft-container {
+    padding-bottom: 0;
+  }
+
+  .nft-container img {
+    height: 160px;
+  }
+
+  .steps-container img {
+    padding-top: 16px;
+    height: 240px;
+  }
+
+  .ticket-fans img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 470px) {
+  .pot-container {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pot-container h1 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .current-pot-container {
+    padding: 24px 24px 12px 24px;
+  }
+
+  .nft-container img {
+    height: 120px;
+  }
+
+  .nft-container p {
+    font-size: 12px;
+    line-height: 0;
+    padding-bottom: 24px;
+  }
+  
+  #about {
+    padding: 0 30px;
+  }
+
+  .info-content {
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  
+  #pot {
+    font-size: 24px;
+  }
+  
+  .pot {
+    font-size: 40px;
+  }
+  
+  .pot-usd {
+    font-size: 20px;
+  }
+  
+  .calculations {
+    padding: 24px 36px;
+    flex-direction: column;
+  }
+
+  .calculation {
+    padding: 0 12px;
+  }
+
+  .ticket-fans img {
+    height: 120px;
+  }
+
+  .steps-container img {
+    padding-top: 16px;
+    height: 140px;
+  }
+
+  .tickets-bought {
+    margin: 0 100px;
+  }
+
+  .about-container img {
+    height: 80px;
+  }
+
+  .how-container {
+    padding: 48px 40px;
+  }
+
+  .minting-box span {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 80px 40px;
+  }
+}
+
+/* Mint CSS */
+.minting-box span {
+  /* -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg,white,white); */
+}

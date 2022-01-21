@@ -1,0 +1,49 @@
+:root {
+  
+  /* Main Settings  */
+  --main-background-color: rgb(0, 0, 0);
+
+  --text-primary-color: rgb(255, 255, 255);
+  --text-secondary-color: rgb(255, 255, 255);
+
+  /* Nav Settings  */
+  --nav-link-color: rgb(0, 0, 0);
+  --nav-link-hover-color: rgb(87, 87, 87);
+  --nav-link-hover-background-color: none;
+  --nav-background-color: none;
+  --nav-height: 100px;
+  --nav-logo-width: 155px;
+  --nav-logo-font-size: 16px;
+
+  /* Mobile Nav Settings  */
+
+  --mobile-nav-background-color: rgb(155, 155, 155);
+  --mobile-nav-logo-height:100px;
+  --mobile-nav-link-color: rgb(65, 65, 65);
+  --mobile-nav-link-hover-color: rgb(29, 29, 29);
+  --mobile-nav-link-size: 20px;
+
+  /* Card Settings  */
+  --card-background-color: rgba(0, 0, 0, 0.9);
+  --card-backdrop-filter: blur(40px);
+  --card-border-radius: 10px;
+  --card-shadow: 10px 10px 20px -13px rgb(121, 121, 121);
+
+  /* Minting Area */
+  --minting-box-color: #151A1F;
+  --minting-box-heading-color: white;
+  --minting-box-info-box-color: rgb(65, 65, 65);
+  --minting-box-text-color: white;
+
+
+  /* Minting Button */
+  --minting-button-color: linear-gradient(180deg,#604ae5 0%,#813eee 100%);
+  --minting-button-text-color: white;
+
+}
+
+
+
+
+
+
