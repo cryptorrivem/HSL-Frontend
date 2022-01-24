@@ -5,15 +5,15 @@ import { getId, hashUrl, parseTextFile, trimHash } from "../../utils/tickets";
 import { useDrawContext } from "../draw.store";
 import "./tickets.css";
 
-function Ticket({ pos, number, hash, currentTicket }) {
+function Ticket({ pos, number, ticket, hash, currentTicket }) {
   const isCurrent = currentTicket && currentTicket.number === number;
-  const className = isCurrent ? "title" : "";
+  const className = isCurrent ? "current-ticket" : "";
 
   return (
     <>
       <div className={className}>{pos}</div>
       <a id={getId(number)} href={`#${getId(number)}`} className={className}>
-        {number}
+        {ticket}
       </a>
       <a href={hashUrl(hash)} target="_blank" className={className}>
         {trimHash(hash)}
@@ -23,12 +23,13 @@ function Ticket({ pos, number, hash, currentTicket }) {
 }
 
 export default function Tickets() {
-  const { tickets, setTickets, currentTicket } = useDrawContext();
+  const { setLottoName, tickets, setTickets, currentTicket } = useDrawContext();
   const onFileReady = useCallback(
-    (data) => {
+    (data, filename) => {
       setTickets(parseTextFile(data));
+      setLottoName(filename.replace(/\..*/, "").replace(/o/g, "◎"));
     },
-    [setTickets]
+    [setTickets, setLottoName]
   );
 
   return (
@@ -48,7 +49,7 @@ export default function Tickets() {
       <div className={`table ${tickets.length === 0 && "hidden"}`}>
         <div className="tickets">
           <Title>pos</Title>
-          <Title>#</Title>
+          <Title>ticket</Title>
           <Title>Hash</Title>
         </div>
         <div className="scrollable-tickets">

@@ -21,8 +21,24 @@
 
 .tickets {
   display: grid;
-  grid-template-columns: 2rem 3rem 1fr;
+  grid-template-columns: 3rem 12rem 1fr;
   gap: 0.25rem 2rem;
   font-size: 1rem;
   text-align: left;
+}
+.current-ticket {
+  animation-name: current-ticket-color;
+  animation-duration: 0.75s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes current-ticket-color {
+  from {
+    color: #ef14f1;
+  }
+  to {
+    color: white;
+  }
 }
