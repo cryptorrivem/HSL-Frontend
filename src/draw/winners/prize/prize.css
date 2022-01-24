@@ -1,0 +1,50 @@
+.prize-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.prize-pot {
+  font-size: 1.5rem;
+}
+.prize-pot-usd {
+  font-size: 1rem;
+}
+
+.prize-input-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto 1fr;
+  color: white !important;
+}
+.prize-input {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  color: white !important;
+  border-bottom: 0.2rem dashed white;
+}
+.prize-input.error {
+  border-bottom-color: tomato;
+}
+.prize-input:disabled {
+  border-bottom-color: #777;
+}
+
+.winner {
+  text-align: center;
+  margin-top: 1rem;
+  height: 5rem;
+}
+.winner-ticket {
+  cursor: pointer;
+}
+.winner .image {
+  display: inline-block;
+  width: 10rem;
+  height: 5rem;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 38%;
+}

@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-import "./file-input.css";
 
 export default function FileInput({
   id,
@@ -23,7 +22,7 @@ export default function FileInput({
   );
   return (
     <div>
-      <label htmlFor={id} className={`file-input-label ${!name && "empty"}`}>
+      <label htmlFor={id} className="button">
         {name || placeholder}
       </label>
       <input

@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Draw from "./draw/Draw";
+import { DrawStore } from "./draw/draw.store";
 
 // const theme = createTheme({
 //   palette: {
@@ -136,32 +137,11 @@ const App = () => {
       </nav>
       <div className="landing-container">
         <div className="draw-container">
-          <Draw />
+          <DrawStore>
+            <Draw />
+          </DrawStore>
         </div>
       </div>
-      <footer>
-        <h2 className="colored-text">Feeling lucky?</h2>
-        <p>Buy your Heavens Sevens Lotto ticket now!</p>
-        <button onClick={() => topFunction()}>Buy Tickets →</button>
-        <div className="footer-links">
-          <a
-            href="http://discord.gg/z2fSZZEMTE"
-            target="_blank"
-            className="nav-link"
-            onClick={() => setToggleMenu(!toggleMenu)}
-          >
-            <img src="/discord.png" alt="Discord" className="nav-favicon" />
-          </a>
-          <a
-            href="https://twitter.com/HeavensLotto"
-            target="_blank"
-            className="nav-link"
-            onClick={() => setToggleMenu(!toggleMenu)}
-          >
-            <img src="/twitter.png" alt="Twitter" className="nav-favicon" />
-          </a>
-        </div>
-      </footer>
     </main>
   );
 };
