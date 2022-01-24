@@ -18,32 +18,36 @@ body {
   padding: 0;
 }
 
-*{
+* {
   scroll-behavior: smooth !important;
 }
 
-body, button, input {
-  font-family: Symtext!important;
+body,
+button,
+.button,
+input {
+  font-family: Symtext !important;
 }
 
-button {
+button,
+.button {
   padding: 12px 20px;
   cursor: pointer;
-  background: #08D5D6;
+  background: #08d5d6;
   color: white;
   border: 0;
-  border-bottom: 8px solid #068F97;
   border-radius: 2px;
 }
 
 .colored-text {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-image: linear-gradient(45deg,#00F0F0,#E91AF0);
+  background-image: linear-gradient(45deg, #00f0f0, #e91af0);
 }
 
-button:hover {
-  background: #068F97;
+button:hover,
+.button:hover {
+  background: #068f97;
 }
 
 a {
@@ -52,7 +56,7 @@ a {
 }
 
 main {
-  background: #171717;
+  background: #0f0f0f;
   color: white;
   display: flex;
   flex-direction: column;
@@ -62,11 +66,16 @@ main {
   min-height: 100vh;
 }
 
+nav.placeholder {
+  position: unset;
+  visibility: hidden;
+  min-height: calc(5rem + 20px);
+}
 nav {
   min-height: 5rem;
   position: fixed;
   width: 100%;
-  background-color: #171717;
+  background-color: #0f0f0f;
   color: white;
   box-shadow: 0 0 20px gray;
   z-index: 99;
@@ -100,7 +109,7 @@ nav div img {
   /* border-bottom: 1px solid; */
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-image: linear-gradient(45deg,#00F0F0,#E91AF0);
+  background-image: linear-gradient(45deg, #00f0f0, #e91af0);
 }
 
 .nav-favicon {
@@ -135,13 +144,12 @@ nav div img {
 
 .landing-container {
   /* padding-top: 24px; */
-  background-color: #171717;
+  background-color: #0f0f0f;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   /* text-align: center; */
   /* align-items: center; */
-  height: 100vh;
   width: 100%;
   z-index: 2;
   /* background-image: url(/resources/images/tickets_background2.png); */
@@ -160,7 +168,7 @@ marquee img {
 }
 
 .landing-container p span {
-  background-image: linear-gradient(45deg,#EF14F1,#EF14F1);
+  background-image: linear-gradient(45deg, #ef14f1, #ef14f1);
   font-size: 16px;
 }
 
@@ -177,7 +185,7 @@ marquee img {
 }
 
 .pot {
-  color: #FFB701;
+  color: #ffb701;
   font-size: 120px;
   line-height: 0;
 }
@@ -189,7 +197,7 @@ marquee img {
 
 .pot-container a:hover {
   cursor: pointer;
-  color: #00F0F0;
+  color: #00f0f0;
 }
 
 .nft-container {
@@ -198,12 +206,21 @@ marquee img {
 
 .nft-container img {
   border-radius: 8px;
-  box-shadow: 0 0 8px 8px #EF14F1;
+  box-shadow: 0 0 8px 8px #ef14f1;
 }
 
-progress::-moz-progress-bar { background: #EF14F1; border-radius: 4px; }
-progress::-webkit-progress-value { background: #EF14F1; border-radius: 4px; }
-progress { background: #EF14F1; border-radius: 4px; }
+progress::-moz-progress-bar {
+  background: #ef14f1;
+  border-radius: 4px;
+}
+progress::-webkit-progress-value {
+  background: #ef14f1;
+  border-radius: 4px;
+}
+progress {
+  background: #ef14f1;
+  border-radius: 4px;
+}
 
 .progress-container {
   display: flex;
@@ -295,7 +312,7 @@ progress { background: #EF14F1; border-radius: 4px; }
 
 .step span {
   font-size: 36px;
-  background-image: linear-gradient(45deg,#FFB701,#FFB701);
+  background-image: linear-gradient(45deg, #ffb701, #ffb701);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   /* display: flex; */
@@ -315,7 +332,7 @@ progress { background: #EF14F1; border-radius: 4px; }
 
 .calculation:first-child {
   flex: 1 0 60%;
-  background: #FFB701;
+  background: #ffb701;
 }
 
 .calculation {
@@ -345,8 +362,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
-  -moz-appearance:textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 footer {
@@ -357,15 +374,15 @@ footer button {
   /* height: 46px; */
   margin: 16px 0;
   /* border-radius: 40px; */
-  color: #1E293B;
-  background-image: linear-gradient(45deg,#00F0F0,#E91AF0);
+  color: #1e293b;
+  background-image: linear-gradient(45deg, #00f0f0, #e91af0);
   border: none;
   font-size: 16px;
 }
 
 footer button:hover {
   cursor: pointer;
-  background-image: linear-gradient(45deg,#E91AF0, #00F0F0);
+  background-image: linear-gradient(45deg, #e91af0, #00f0f0);
 }
 
 .footer-links {
@@ -382,7 +399,7 @@ footer button:hover {
     min-height: 5rem;
     width: 100%;
     justify-content: space-around;
-    box-shadow: 0 0 20px rgba(0,0,0,0.04);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
   }
 
   .nav-link {
@@ -513,7 +530,7 @@ footer button:hover {
     font-size: 25px;
     margin-bottom: 0;
   }
-  
+
   .nft-container {
     padding-bottom: 0;
   }
@@ -543,7 +560,7 @@ footer button:hover {
     font-size: 20px;
     line-height: 30px;
   }
-  
+
   .current-pot-container {
     padding: 24px 24px 12px 24px;
   }
@@ -557,7 +574,7 @@ footer button:hover {
     line-height: 0;
     padding-bottom: 24px;
   }
-  
+
   #about {
     padding: 0 30px;
   }
@@ -566,19 +583,19 @@ footer button:hover {
     flex-direction: column;
     padding: 0 30px;
   }
-  
+
   #pot {
     font-size: 24px;
   }
-  
+
   .pot {
     font-size: 40px;
   }
-  
+
   .pot-usd {
     font-size: 20px;
   }
-  
+
   .calculations {
     padding: 24px 36px;
     flex-direction: column;

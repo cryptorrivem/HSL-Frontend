@@ -1,0 +1,9 @@
+.jackpot,
+.jackpot * {
+  color: #ffb701;
+  background-image: unset;
+  -webkit-text-fill-color: unset;
+}
+.jackpot .title {
+  font-size: 3rem;
+}

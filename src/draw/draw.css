@@ -1,0 +1,6 @@
+.draw {
+  padding: 1rem 2rem;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 16rem;
+}
