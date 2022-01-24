@@ -9,7 +9,7 @@ const placeholder = "...";
 
 export default function Prize({ prize, className }) {
   const { solPrice, prizesPot } = usePotContext();
-  const { canSubmitPrize, winners, submitWinner } = useDrawContext();
+  const { canSubmitPrize, winners, submitWinner, lottoName } = useDrawContext();
   const winner = winners[prize];
   const [error, setError] = useState(false);
   const onKeyPress = useCallback(
@@ -22,8 +22,8 @@ export default function Prize({ prize, className }) {
     [prize, submitWinner, setError]
   );
   const onCopyWinnerToClipboard = useCallback(() => {
-    navigator.clipboard.writeText(`${prize}: ${winner.ticket}`);
-  }, [prize, winner]);
+    navigator.clipboard.writeText(`${lottoName}\n${prize}: ${winner.ticket}`);
+  }, [prize, lottoName, winner]);
 
   const prizePot = prizesPot[prize];
 

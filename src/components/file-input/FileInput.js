@@ -12,7 +12,7 @@ export default function FileInput({
       if (file) {
         const reader = new FileReader();
         reader.onload = function () {
-          onReady(reader.result);
+          onReady(reader.result, file.name);
         };
         reader.readAsText(file, "utf-8");
         setName(file.name);

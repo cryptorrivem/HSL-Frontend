@@ -19,6 +19,7 @@ export const prizes = {
 };
 
 export function DrawStore({ children }) {
+  const [lottoName, setLottoName] = useState("");
   const [tickets, setTickets] = useState([]);
   const [currentTicket, setCurrentTicket] = useState(null);
   const [winners, setWinners] = useState({});
@@ -75,6 +76,8 @@ export function DrawStore({ children }) {
   return (
     <DrawContext.Provider
       value={{
+        lottoName,
+        setLottoName,
         tickets,
         setTickets,
         currentTicket,
