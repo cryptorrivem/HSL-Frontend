@@ -1,0 +1,7 @@
+.file-input-label {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.file-input-label.empty {
+  border: 0.2rem solid white;
+}
